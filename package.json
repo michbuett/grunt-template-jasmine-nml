@@ -1,0 +1,29 @@
+{
+  "name": "grunt-template-jasmine-nml",
+  "version": "1.0.0",
+  "description": "Node module loader template for grunt-contrib-jasmine task",
+  "main": "src/js/template.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michbuett/grunt-template-jasmine-nml.git"
+  },
+  "keywords": [
+    "grunt",
+    "jasmine",
+    "template",
+    "module",
+    "loader"
+  ],
+  "author": "michbuett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michbuett/grunt-template-jasmine-nml/issues"
+  },
+  "homepage": "https://github.com/michbuett/grunt-template-jasmine-nml",
+  "dependencies": {
+    "node-module-loader": "^1.0.1"
+  }
+}
