@@ -7,16 +7,12 @@ var projectRoot = __dirname + '/../../../..';
 
 exports.process = function (grunt, task, context) {
     var templateSrc = grunt.file.read(templateFile);
-    var modules = [].concat(context.scripts.src).map(function (s) {
+    var modules = [].concat(context.scripts.src, context.scripts.specs).map(function (s) {
         return ('./' + s).replace(/\/\//g, '/').replace(/\.js$/, '');
     });
-    // var modules = [].concat(context.scripts.src, context.scripts.specs).map(function (s) {
-    //     return ('./' + s).replace(/\/\//g, '/').replace(/\.js$/, '');
-    // });
-
-    // console.log(JSON.stringify(context, null, '  '));
 
     loader.build({
+        sourcePath: context.options.sourceRoot,
         root: path.join(projectRoot, (context.options.root || '')),
         modules: modules,
         target: context.temp + '/loader.js'
