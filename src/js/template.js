@@ -13,7 +13,7 @@ exports.process = function (grunt, task, context) {
 
     loader.build({
         sourcePath: context.options.sourceRoot,
-        root: path.join(projectRoot, (context.options.root || '')),
+        root: path.resolve(projectRoot, (context.options.root || '')),
         modules: modules,
         target: context.temp + '/loader.js'
     });
