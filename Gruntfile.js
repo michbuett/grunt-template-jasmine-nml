@@ -55,18 +55,38 @@ module.exports = function (grunt) {
                 },
             },
 
+            coverage: {
+                src: ['tests/potions/**/*.js'],
+
+                options: {
+                    keepRunner: true,
+                    specs: 'tests/**/*.js',
+                    template: require('grunt-template-jasmine-istanbul'),
+                    templateOptions: {
+                        template: require('./src/js/template'),
+                        templateOptions: {
+                            root: __dirname,
+                            sourceRoot: '.grunt/grunt-contrib-jasmine/',
+                        },
+                        coverage: 'reports/coverage/coverage.json',
+                        report: 'reports/coverage',
+                        thresholds: {
+                            lines: 85,
+                            statements: 85,
+                            branches: 80,
+                            functions: 90
+                        },
+                    }
+                },
+            },
+
         },
 
         // ////////////////////////////////////////////////////////////////////
         // configure watcher
         watch: {
-            json: {
-                files: ['**/.json'],
-                tasks: ['jsonlint'],
-            },
-
-            js: {
-                files: ['Gruntfile.js', 'src/**/*', 'templates/**/*', 'tests/**/*'],
+            all: {
+                files: ['Gruntfile.js', 'package.json', 'src/**/*', 'tests/**/*'],
                 tasks: ['test'],
             },
         },

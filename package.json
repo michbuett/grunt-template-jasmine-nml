@@ -30,7 +30,8 @@
     "grunt-contrib-jasmine": "~0.8.2",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-watch": "~0.5.1",
-    "grunt-jsonlint": "~1.0.0"
+    "grunt-jsonlint": "~1.0.0",
+    "grunt-template-jasmine-istanbul": "^0.3.4"
   },
   "homepage": "https://github.com/michbuett/grunt-template-jasmine-nml",
   "dependencies": {
