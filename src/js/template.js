@@ -12,7 +12,7 @@ exports.process = function (grunt, task, context) {
     });
 
     loader.build({
-        sourcePath: context.options.sourceRoot,
+        pathmap: context.options.pathmap,
         root: path.resolve(projectRoot, (context.options.root || '')),
         modules: modules,
         target: context.temp + '/loader.js'

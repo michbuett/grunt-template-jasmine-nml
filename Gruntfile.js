@@ -59,22 +59,22 @@ module.exports = function (grunt) {
                 src: ['tests/potions/**/*.js'],
 
                 options: {
-                    keepRunner: true,
-                    specs: 'tests/**/*.js',
                     template: require('grunt-template-jasmine-istanbul'),
                     templateOptions: {
                         template: require('./src/js/template'),
                         templateOptions: {
                             root: __dirname,
-                            sourceRoot: '.grunt/grunt-contrib-jasmine/',
+                            pathmap: {
+                                'tests/potions/': '.grunt/grunt-contrib-jasmine/tests/potions/',
+                            }
                         },
                         coverage: 'reports/coverage/coverage.json',
                         report: 'reports/coverage',
                         thresholds: {
-                            lines: 85,
-                            statements: 85,
-                            branches: 80,
-                            functions: 90
+                            lines: 95,
+                            statements: 95,
+                            branches: 95,
+                            functions: 95
                         },
                     }
                 },

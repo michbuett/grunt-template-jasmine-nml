@@ -35,6 +35,6 @@
   },
   "homepage": "https://github.com/michbuett/grunt-template-jasmine-nml",
   "dependencies": {
-    "node-module-loader": "^1.1.0"
+    "node-module-loader": "^1.2.0"
   }
 }
