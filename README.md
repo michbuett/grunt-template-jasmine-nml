@@ -43,31 +43,31 @@ grunt.initConfig({
 ```js
 // Example configuration
 grunt.initConfig({
-	jasmine: {
-		coverage: {
-			src: ['src/main/js/*.js'],
-			options: {
-				specs: ['src/test/js/*.js'],
-				template: require('grunt-template-jasmine-istanbul'),
-				templateOptions: {
-				  template: require('grunt-template-jasmine-nml'),
-				  templateOptions: {
-			    root: __dirname,
+  jasmine: {
+    coverage: {
+      src: ['src/main/js/*.js'],
+      options: {
+        specs: ['src/test/js/*.js'],
+        template: require('grunt-template-jasmine-istanbul'),
+        templateOptions: {
+          template: require('grunt-template-jasmine-nml'),
+          templateOptions: {
+            root: __dirname,
             pathmap: {
               'src/main/js/': '.grunt/grunt-contrib-jasmine/src/main/js/',
             }
-				  }
-					coverage: 'bin/coverage/coverage.json',
-					report: 'bin/coverage',
+          }
+          coverage: 'bin/coverage/coverage.json',
+          report: 'bin/coverage',
           thresholds: {
             lines: 75,
             statements: 75,
             branches: 75,
             functions: 90
           }
-				}
-			}
-		}
-	}
+        }
+      }
+    }
+  }
 }
 ```
