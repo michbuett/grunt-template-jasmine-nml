@@ -7,7 +7,11 @@ var projectRoot = __dirname + '/../../../..';
 
 exports.process = function (grunt, task, context) {
     var templateSrc = grunt.file.read(templateFile);
-    var modules = [].concat(context.scripts.src, context.scripts.specs).map(function (s) {
+    var modules = [].concat(
+        context.scripts.src,
+        context.scripts.helpers,
+        context.scripts.specs
+    ).map(function (s) {
         return ('./' + s).replace(/\/\//g, '/').replace(/\.js$/, '');
     });
 

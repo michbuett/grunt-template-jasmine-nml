@@ -14,5 +14,18 @@ describe('node module loader template', function () {
             'Potion B (extended B)'
         );
     });
+
+    it('allows helper to require potions', function () {
+        // prepare
+        var helper = require('../../tests/helpers/SomeHelper');
+
+        // execute
+        var potion = helper.getPotionA();
+
+        // verify
+        expect(typeof potion).toBe('object');
+        expect(typeof potion.getName).toBe('function');
+        expect(potion.getName()).toBe('Potion A (extended B) (extended A)');
+    });
 });
 

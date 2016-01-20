@@ -12,7 +12,7 @@
 <body>
 <!-- NODE MODULE LOADER -->
 <% with (scripts) { %>
-  <% [].concat(polyfills, jasmine, boot, vendor, helpers, reporters).forEach(function(script){ %>
+  <% [].concat(polyfills, jasmine, boot, vendor, reporters).forEach(function(script){ %>
   <script src="<%= script %>"></script>
   <% }) %>
   <script src="<%= temp %>/loader.js"></script>

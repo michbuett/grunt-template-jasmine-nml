@@ -39,6 +39,10 @@ module.exports = function (grunt) {
                 keepRunner: true,
                 summary: true,
 
+                helpers: [
+                    'tests/helpers/**/*.js',
+                ],
+
                 specs: [
                     'tests/specs/**/*.spec.js',
                 ],
@@ -79,7 +83,6 @@ module.exports = function (grunt) {
                     }
                 },
             },
-
         },
 
         // ////////////////////////////////////////////////////////////////////
