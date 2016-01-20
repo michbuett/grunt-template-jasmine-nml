@@ -1,11 +1,11 @@
 module.exports = (function () {
     'use strict';
 
-    var alchemy = require('alchemy.js');
+    var Utils = require('alchemy.js/lib/Utils');
     var potionB = require('./PotionB');
     var potionD = require('./PotionD');
 
-    return alchemy.extend(potionB, {
+    return Utils.extend(potionB, {
 
         name: 'Potion A',
 
