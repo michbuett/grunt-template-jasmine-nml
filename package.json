@@ -1,6 +1,6 @@
 {
   "name": "grunt-template-jasmine-nml",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Node module loader template for grunt-contrib-jasmine task",
   "main": "src/js/template.js",
   "scripts": {
