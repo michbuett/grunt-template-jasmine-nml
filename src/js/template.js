@@ -22,5 +22,5 @@ exports.process = function (grunt, task, context) {
         target: context.temp + '/loader.js'
     });
 
-    return grunt.util._.template(templateSrc, context);
+    return grunt.util._.template(templateSrc)(context);
 };
